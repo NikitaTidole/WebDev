@@ -1,0 +1,52 @@
+<html>
+<head>
+
+<style>
+.cont
+{
+border:2px black;
+width:300px;
+margin:350px;
+padding:50px;
+ display: flex;
+
+}
+</style>
+}
+
+<script>
+let pic=["2.jpg","3.jpg","4.jpg",];
+
+let c=0;
+function nextImg()
+{
+c=c+1
+let p=pic[c];
+if(c == 3)
+	c=0
+else
+ document.getElementById("slider").src = p;
+}
+function preImg()
+{
+c=c-1
+let p=pic[c];
+
+document.getElementById("slider").src = p;
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="cont">
+<button onclick="preImg()"> Pre</button>
+<img  id="slider" src="2.jpg">
+
+<button onclick="nextImg()"> Next</button>
+</div>
+</body>
+</html>
